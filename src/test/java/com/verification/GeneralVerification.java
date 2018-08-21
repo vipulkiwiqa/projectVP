@@ -268,6 +268,19 @@ public class GeneralVerification extends AbstractPage {
 		else
 			return false;
 	}
+
+
+
+	public boolean verifyhomepage_threadandshirts() {
+		// TODO Auto-generated method stub
+		
+		String url = driver.getCurrentUrl();
+		
+		if(url.equals("https://www.threadsandshirts.com/"))
+			return true;
+		else
+		return false;
+	}
 	
 	
 

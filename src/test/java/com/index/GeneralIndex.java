@@ -648,6 +648,23 @@ public class GeneralIndex extends SeleniumInit {
 	@Test(priority=0)
 	public void addproducttocartandcheckout(){
 		
+		 int step=1;
+			
+			Common.logcase("To verify that user is able to add the product into the cart and do checkout with all valid fields ");
+
+			Common.logcase("--------------------------------------------------------------------------");
+			
+			Common.logstep("Step "+ (step++) +". open : https://www.threadsandshirts.com/");
+			
+			 boolean tf = generalVerification.verifyhomepage_threadandshirts();
+			 if(tf)
+				 Common.log("home page is opened");
+			 else
+				 Common.log("home page is not opened");
+			 
+		
+		
+		
 	}
    
 }
