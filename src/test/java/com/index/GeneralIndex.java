@@ -645,7 +645,11 @@ public class GeneralIndex extends SeleniumInit {
 		
 	}
 	   
-	 	
+	@Test(priority=0)
+	public void addproducttocartandcheckout(){
+		
+	}
+   
 }
 
 

@@ -24,8 +24,9 @@
 				<configuration>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
-						<suiteXmlFile>Build/index.xml</suiteXmlFile>
-						<suiteXmlFile>Build/index1.xml</suiteXmlFile>
+						<!-- <suiteXmlFile>Build/index.xml</suiteXmlFile>
+						<suiteXmlFile>Build/index1.xml</suiteXmlFile> -->
+						<suiteXmlFile>Build/index2.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<reportsDirectory>test-output</reportsDirectory>
 					<properties>
