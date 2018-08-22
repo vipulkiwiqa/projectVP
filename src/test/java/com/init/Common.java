@@ -509,7 +509,7 @@ public class Common {
 	public static void waitForElement(WebDriver driver, String xpath) {
 		wait = new WebDriverWait(driver, 600);
 		try {
-			// wait.until(visibilityOfElementLocated(By.xpath(xpath)));
+			wait.until(visibilityOfElementLocated(By.xpath(xpath)));
 		} catch (Exception e) {
 		}
 	}

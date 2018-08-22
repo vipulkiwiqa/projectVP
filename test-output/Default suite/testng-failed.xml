@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.index.GeneralIndex">
+        <methods>
+          <include name="purchaseorcheckout"/>
+          <include name="usernamealreadyexist"/>
+          <include name="addproducttocartandcheckout"/>
+          <include name="emailidalreadyexist"/>
+          <include name="tearDown"/>
+          <include name="blankfields"/>
+          <include name="password_minimum_length"/>
+          <include name="passwordnotmatch"/>
+          <include name="phonefield_minimum_length"/>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="allvaliddata"/>
+          <include name="invalidemailid"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.index.GeneralIndex -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

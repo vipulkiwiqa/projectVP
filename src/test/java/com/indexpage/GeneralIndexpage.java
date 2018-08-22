@@ -115,7 +115,35 @@ public class GeneralIndexpage extends AbstractPage {
 	
 	@FindBy(xpath="//input[@value='Update']")private WebElement click_on_update;
 	
+	//Thread and Shirts
 	
+	@FindBy(xpath="//a[contains(text(),'SHOP')]")private WebElement shop;
+	
+	@FindBy (xpath="//a/strong[contains(text(),'Accessories')]")private WebElement accessories;
+	
+	@FindBy(xpath="//a[contains(text(),'Black Dobby')]")private WebElement product;
+	
+	@FindBy(xpath="//div[1]/div/button[contains(text(),'Add to cart')]")private WebElement addtocartbutton;
+	
+	@FindBy(xpath="//*[@id='top']/div[8]/div/div[2]/div[1]/button")private WebElement continueshoppingbutton;
+	
+	@FindBy(xpath="//*[@id='top']/div[8]/div/div[2]/div[2]/a")private WebElement CheckOutbutton;
+	
+	@FindBy(xpath="//input[@id='coupon_field']")private WebElement promotioncode;
+	
+	@FindBy(xpath="//td/form/div/span/button")private WebElement clickonapply;
+	
+	@FindBy(xpath="//div//button[text()='×']")private WebElement closemessage;
+	
+	@FindBy(xpath="//label//input[@id='checkout_type_guest']")private WebElement clickoncheckoutasguest;
+	
+	@FindBy(xpath="//button[contains(text(),'Checkout as guest')]")private WebElement clickoncheckoutasguestbutton;
+	
+	@FindBy(xpath="//input[@name='user_data[b_firstname]']")private WebElement firstname_ts;
+	
+	@FindBy(xpath="//input[@name='user_data[b_lastname]']")private WebElement lastname_ts;
+	
+	@FindBy(xpath="//input[@name='user_data[email]']")private WebElement emailaddress_ts;
 	
 	
 	
@@ -897,6 +925,254 @@ public GeneralVerification clickonupdatebutton() {
 	
 	return new GeneralVerification(driver);
 }
+
+
+//Threads and Shirts
+
+
+public GeneralVerification mousehoveronshop() {
+	// TODO Auto-generated method stub
+	
+    Common.pause(10);
+	
+	Actions act = new Actions(driver);
+	if(shop.isDisplayed()){
+	act.moveToElement(shop).build().perform();
+	Common.log("--> mouse hover on shop menu <--");
+	Common.pause(10);
+	}
+	
+	return new GeneralVerification(driver);
+	
+}
+
+
+
+
+public GeneralVerification clickonaccessories() {
+	// TODO Auto-generated method stub
+	
+	Common.pause(10);
+	
+	if(accessories.isDisplayed()){
+	accessories.click();
+	Common.log("--> click on accessories link <--");
+	}
+	else
+	Common.log("--> accessories link is not displayed <--");
+	
+	return new GeneralVerification(driver);
+}
+
+
+
+
+public GeneralVerification clickonproduct() {
+	// TODO Auto-generated method stub
+	Common.pause(8);
+	
+	if(product.isDisplayed()){
+		product.click();
+		Common.log("--> Click on the product <--");
+	}
+	else
+		Common.log("--> didn't click on the product <--");
+	
+	
+	return new GeneralVerification(driver);
+}
+
+
+
+
+public GeneralVerification clickonaddtocartbutton() {
+	// TODO Auto-generated method stub
+	
+	Common.pause(8);
+	
+	if(addtocartbutton.isDisplayed()){
+		Common.log("--> Click on Add To Cart button <--");
+		addtocartbutton.click();
+		
+	}
+	else
+		Common.log("--> didn't Click on Add To Cart button <--");
+	
+	
+	return new GeneralVerification(driver);
+}
+
+
+
+
+public GeneralVerification clickoncontinuesshoppingbutton() {
+	// TODO Auto-generated method stub
+	Common.waitForElement(driver, "//*[@id='top']/div[8]/div/div[2]/div[1]/button");
+	
+	Common.pause(3);
+	
+	Common.log("--> click on : " + continueshoppingbutton.getText() + " <--");
+	continueshoppingbutton.click();
+	
+	return new GeneralVerification(driver);
+}
+
+
+
+
+public GeneralVerification clickoncheckoutbutton() {
+	// TODO Auto-generated method stub
+	
+    Common.waitForElement(driver, "//*[@id='top']/div[8]/div/div[2]/div[2]/a");
+	
+	Common.pause(3);
+	
+	Common.log("--> click on : " + CheckOutbutton.getText() + " <--");
+	CheckOutbutton.click();
+	
+	return new GeneralVerification(driver);
+}
+
+
+
+
+public GeneralVerification enterpromotioncode() {
+	// TODO Auto-generated method stub
+	Common.pause(7);
+	
+	if(promotioncode.isDisplayed()){
+	promotioncode.sendKeys("BESTDAD15");
+	Common.log("--> Enter Promotion Code : BESTDAD15 <--");
+	}
+	else
+		Common.log("--> Not Enter Promotion Code :---- <--");
+	
+	
+	return new GeneralVerification(driver);
+}
+
+
+
+
+public GeneralVerification clickonapplybutton() {
+	// TODO Auto-generated method stub
+	Common.pause(4);
+	
+	if(clickonapply.isDisplayed()){
+	clickonapply.click();
+	Common.log("--> Click on Apply Button <--");
+	}
+	else
+		Common.log("--> Didn't Click on Apply Button <--");
+	
+
+	return new GeneralVerification(driver);
+}
+
+
+
+
+public GeneralVerification closethemessage() {
+	// TODO Auto-generated method stub
+	Common.pause(5);
+	if(closemessage.isDisplayed()){
+		closemessage.click();
+		Common.log("--> Warning Message closed <--");
+	}
+	else
+		Common.log("--> Warning Message closed <--");
+	
+	return new GeneralVerification(driver);
+}
+
+
+
+
+public GeneralVerification clickonchechoutasguest() {
+	// TODO Auto-generated method stub
+	Common.pause(4);
+	
+	if(clickoncheckoutasguest.isDisplayed()){
+		clickoncheckoutasguest.click();
+		Common.log("--> Click on checkout as guest user <--");
+	}
+	else
+		Common.log("--> Didn't Click on checkout as guest user <--");
+	
+	return new GeneralVerification(driver);
+}
+
+
+
+
+public GeneralVerification clickonchechoutasguestbutton() {
+	// TODO Auto-generated method stub
+	
+	Common.pause(4);
+	
+	if(clickoncheckoutasguestbutton.isDisplayed()){
+		clickoncheckoutasguestbutton.click();
+		Common.log("--> Click on checkout as guest user button <--");
+	}
+	else
+		Common.log("--> Didn't Click on checkout as guest user button <--");
+	return new GeneralVerification(driver);
+}
+
+
+
+
+public GeneralVerification enterfirstnamets() {
+	// TODO Auto-generated method stub
+	Common.pause(4);
+
+	if(firstname_ts.isDisplayed()){
+		firstname_ts.sendKeys("xzyabc");
+		Common.log("--> Enter Name : " + firstname_ts.getText()+" <--");
+	}
+	else
+		Common.log("--> First Name is not Entered <--");
+	
+	return new GeneralVerification(driver);
+}
+
+
+
+
+public GeneralVerification enterLastnamets() {
+	// TODO Auto-generated method stub
+	Common.pause(3);
+	
+	if(lastname_ts.isDisplayed()){
+		lastname_ts.sendKeys("pqr");
+		Common.log("--> Enter Name : " + lastname_ts.getText()+" <--");
+	}
+	else
+		Common.log("--> First Name is not Entered <--");
+	
+	return new GeneralVerification(driver);
+}
+
+
+
+
+public GeneralVerification enteremailaddressts() {
+	// TODO Auto-generated method stub
+	Common.pause(4);
+
+	if(emailaddress_ts.isDisplayed()){
+		emailaddress_ts.sendKeys("pqr@gmail.com");
+		Common.log("--> Enter Name : " + emailaddress_ts.getText()+" <--");
+	}
+	else
+		Common.log("--> First Name is not Entered <--");
+	
+	
+	return new GeneralVerification(driver);
+}
+
+
+
 
 
 

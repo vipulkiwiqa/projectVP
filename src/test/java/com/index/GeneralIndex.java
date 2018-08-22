@@ -657,11 +657,72 @@ public class GeneralIndex extends SeleniumInit {
 			Common.logstep("Step "+ (step++) +". open : https://www.threadsandshirts.com/");
 			
 			 boolean tf = generalVerification.verifyhomepage_threadandshirts();
-			 if(tf)
-				 Common.log("home page is opened");
-			 else
-				 Common.log("home page is not opened");
 			 
+			 if(tf)
+				 Common.log("--> home page is opened <--");
+			 else
+				 Common.log("--> home page is not opened <--");
+			 
+			 Common.logstep("Step "+ (step++) +". Mouse hover over shop menu");
+			 
+			 generalVerification = generalIndexpage.mousehoveronshop();
+			 
+             Common.logstep("Step "+ (step++) +". Click on accessories");
+			 
+			 generalVerification = generalIndexpage.clickonaccessories();
+			 
+             Common.logstep("Step "+ (step++) +". Click on Product");
+			 
+			 generalVerification = generalIndexpage.clickonproduct();
+			 
+             Common.logstep("Step "+ (step++) +". Click on Add to cart button");
+			 
+			 generalVerification = generalIndexpage.clickonaddtocartbutton();
+			 
+             Common.logstep("Step "+ (step++) +". Click on continues shopping button");
+			 
+			 generalVerification = generalIndexpage.clickoncontinuesshoppingbutton();
+			 
+             Common.logstep("Step "+ (step++) +". Click on Add to cart button Again");
+			 
+			 generalVerification = generalIndexpage.clickonaddtocartbutton();
+			 
+             Common.logstep("Step "+ (step++) +". Click on CheckOut button");
+			 
+			 generalVerification = generalIndexpage.clickoncheckoutbutton();
+		
+             Common.logstep("Step "+ (step++) +". Enter Promotion Code");
+			 
+			 generalVerification = generalIndexpage.enterpromotioncode();
+			 
+             Common.logstep("Step "+ (step++) +". Click on Apply button");
+			 
+			 generalVerification = generalIndexpage.clickonapplybutton();
+		
+             Common.logstep("Step "+ (step++) +". Close the warning message");
+			 
+			 generalVerification = generalIndexpage.closethemessage();
+			 
+             Common.logstep("Step "+ (step++) +". Click on checkout as guest");
+			 
+			 generalVerification = generalIndexpage.clickonchechoutasguest();
+			 
+             Common.logstep("Step "+ (step++) +". Click on checkoutasguest button");
+			 
+			 generalVerification = generalIndexpage.clickonchechoutasguestbutton();
+			 
+             Common.logstep("Step "+ (step++) +". Enter First Name");
+			 
+			 generalVerification = generalIndexpage.enterfirstnamets();
+			 
+             Common.logstep("Step "+ (step++) +". Enter Last Name");
+			 
+			 generalVerification = generalIndexpage.enterLastnamets();
+			 
+             Common.logstep("Step "+ (step++) +". Enter Email Address");
+			 
+			 generalVerification = generalIndexpage.enteremailaddressts();
+		
 		
 		
 		
