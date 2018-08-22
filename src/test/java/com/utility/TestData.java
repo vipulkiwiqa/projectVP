@@ -211,4 +211,41 @@ public class TestData {
 		  return getExcelSheet(1).getRow(2).getCell(1).getStringCellValue();
 		}
 	
+	public static String ts_phone() {
+
+		  System.out.println("Call getURL.......");
+		  getExcelSheet(1).getRow(3).getCell(1).setCellType(Cell.CELL_TYPE_STRING);
+		  
+		  return getExcelSheet(1).getRow(3).getCell(1).getStringCellValue();
+		}
+	
+	public static String ts_address() {
+
+		  System.out.println("Call getURL.......");
+		  return getExcelSheet(1).getRow(4).getCell(1).getStringCellValue();
+		}
+	
+	public static String ts_city() {
+
+		  System.out.println("Call getURL.......");
+		  return getExcelSheet(1).getRow(5).getCell(1).getStringCellValue();
+		}
+	public static String ts_country() {
+
+		  System.out.println("Call getURL.......");
+		  return getExcelSheet(1).getRow(6).getCell(1).getStringCellValue();
+		}
+	
+	public static String ts_state() {
+
+		  System.out.println("Call getURL.......");
+		  return getExcelSheet(1).getRow(7).getCell(1).getStringCellValue();
+		}
+	
+	public static String ts_postalcode() {
+
+		  System.out.println("Call getURL.......");
+		  getExcelSheet(1).getRow(8).getCell(1).setCellType(Cell.CELL_TYPE_STRING);
+		  return getExcelSheet(1).getRow(8).getCell(1).getStringCellValue();
+		}
 }

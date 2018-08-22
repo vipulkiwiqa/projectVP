@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Demo_Frame_Work-_Test_Suite_1">
-              <span class="suite-name border-passed">Demo Frame Work- Test Suite 1</span>
+              <span class="suite-name border-skipped">Demo Frame Work- Test Suite 1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Demo_Frame_Work-_Test_Suite_1" class="hide-methods passed suite-Demo_Frame_Work-_Test_Suite_1"> (hide)</a> <!-- hide-methods passed suite-Demo_Frame_Work-_Test_Suite_1 -->
-                      <a href="#" panel-name="suite-Demo_Frame_Work-_Test_Suite_1" class="show-methods passed suite-Demo_Frame_Work-_Test_Suite_1"> (show)</a> <!-- show-methods passed suite-Demo_Frame_Work-_Test_Suite_1 -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Demo_Frame_Work-_Test_Suite_1" class="hide-methods skipped suite-Demo_Frame_Work-_Test_Suite_1"> (hide)</a> <!-- hide-methods skipped suite-Demo_Frame_Work-_Test_Suite_1 -->
+                      <a href="#" panel-name="suite-Demo_Frame_Work-_Test_Suite_1" class="show-methods skipped suite-Demo_Frame_Work-_Test_Suite_1"> (show)</a> <!-- show-methods skipped suite-Demo_Frame_Work-_Test_Suite_1 -->
                     </span>
-                    <div class="method-list-content passed suite-Demo_Frame_Work-_Test_Suite_1">
+                    <div class="method-list-content skipped suite-Demo_Frame_Work-_Test_Suite_1">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Demo_Frame_Work-_Test_Suite_1" title="com.index.GeneralIndex" hash-for-method="addproducttocartandcheckout">addproducttocartandcheckout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Demo_Frame_Work-_Test_Suite_1 -->
+                    </div> <!-- method-list-content skipped suite-Demo_Frame_Work-_Test_Suite_1 -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,9 +116,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Demo_Frame_Work-_Test_Suite_1" class="panel Demo_Frame_Work-_Test_Suite_1">
-          <div class="suite-Demo_Frame_Work-_Test_Suite_1-class-passed">
+          <div class="suite-Demo_Frame_Work-_Test_Suite_1-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.index.GeneralIndex</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -130,7 +130,7 @@
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Demo_Frame_Work-_Test_Suite_1-class-passed -->
+          </div> <!-- suite-Demo_Frame_Work-_Test_Suite_1-class-skipped -->
         </div> <!-- panel Demo_Frame_Work-_Test_Suite_1 -->
         <div panel-name="test-xml-Demo_Frame_Work-_Test_Suite_1" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -195,12 +195,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'addproducttocartandcheckout')
 data.setCell(0, 2, 'com.index.GeneralIndex')
-data.setCell(0, 3, 131483);
+data.setCell(0, 3, 1);
 window.suiteTableData['Demo_Frame_Work-_Test_Suite_1']= { tableData: data, tableDiv: 'times-div-Demo_Frame_Work-_Test_Suite_1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 ms</span>
               <div id="times-div-Demo_Frame_Work-_Test_Suite_1">
               </div> <!-- times-div-Demo_Frame_Work-_Test_Suite_1 -->
             </div> <!-- times-div -->
@@ -214,40 +214,7 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">addproducttocartandcheckout</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><strong> <h3 style="color:DarkViolet"> To verify that user is able to add the product into the cart and do checkout with all valid fields </h3> </strong></span>
-                <span class="reporter-method-output"><strong> <h3 style="color:DarkViolet"> --------------------------------------------------------------------------</h3> </strong></span>
-                <span class="reporter-method-output"><br><strong>Step 1. open : https://www.threadsandshirts.com/</strong></br></span>
-                <span class="reporter-method-output"></br>--> home page is opened <--</span>
-                <span class="reporter-method-output"><br><strong>Step 2. Mouse hover over shop menu</strong></br></span>
-                <span class="reporter-method-output"></br>--> mouse hover on shop menu <--</span>
-                <span class="reporter-method-output"><br><strong>Step 3. Click on accessories</strong></br></span>
-                <span class="reporter-method-output"></br>--> click on accessories link <--</span>
-                <span class="reporter-method-output"><br><strong>Step 4. Click on Product</strong></br></span>
-                <span class="reporter-method-output"></br>--> Click on the product <--</span>
-                <span class="reporter-method-output"><br><strong>Step 5. Click on Add to cart button</strong></br></span>
-                <span class="reporter-method-output"></br>--> Click on Add To Cart button <--</span>
-                <span class="reporter-method-output"><br><strong>Step 6. Click on continues shopping button</strong></br></span>
-                <span class="reporter-method-output"></br>--> click on : Continue shopping <--</span>
-                <span class="reporter-method-output"><br><strong>Step 7. Click on Add to cart button Again</strong></br></span>
-                <span class="reporter-method-output"></br>--> Click on Add To Cart button <--</span>
-                <span class="reporter-method-output"><br><strong>Step 8. Click on CheckOut button</strong></br></span>
-                <span class="reporter-method-output"></br>--> click on : Checkout <--</span>
-                <span class="reporter-method-output"><br><strong>Step 9. Enter Promotion Code</strong></br></span>
-                <span class="reporter-method-output"></br>--> Enter Promotion Code : BESTDAD15 <--</span>
-                <span class="reporter-method-output"><br><strong>Step 10. Click on Apply button</strong></br></span>
-                <span class="reporter-method-output"></br>--> Click on Apply Button <--</span>
-                <span class="reporter-method-output"><br><strong>Step 11. Close the warning message</strong></br></span>
-                <span class="reporter-method-output"></br>--> Warning Message closed <--</span>
-                <span class="reporter-method-output"><br><strong>Step 12. Click on checkout as guest</strong></br></span>
-                <span class="reporter-method-output"></br>--> Click on checkout as guest user <--</span>
-                <span class="reporter-method-output"><br><strong>Step 13. Click on checkoutasguest button</strong></br></span>
-                <span class="reporter-method-output"></br>--> Click on checkout as guest user button <--</span>
-                <span class="reporter-method-output"><br><strong>Step 14. Enter First Name</strong></br></span>
-                <span class="reporter-method-output"></br>--> Enter First Name : xzyabc <--</span>
-                <span class="reporter-method-output"><br><strong>Step 15. Enter Last Name</strong></br></span>
-                <span class="reporter-method-output"></br>--> Enter Last Name : pqr <--</span>
-                <span class="reporter-method-output"><br><strong>Step 16. Enter Email Address</strong></br></span>
-                <span class="reporter-method-output"></br>--> Email Address is not Entered <--</span>
+                <span class="reporter-method-output"><br> <b>Please look to the screenshot - </b></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -272,9 +239,9 @@ return data;
                 <br/>
                 <span class="ignored-method-name">invalidemailid</span>
                 <br/>
-                <span class="ignored-method-name">password_minimum_length</span>
-                <br/>
                 <span class="ignored-method-name">blankfields</span>
+                <br/>
+                <span class="ignored-method-name">password_minimum_length</span>
                 <br/>
                 <span class="ignored-method-name">passwordnotmatch</span>
                 <br/>
@@ -290,20 +257,22 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.index.GeneralIndex</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@215be6bb)</span>
+                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@4ffacb72)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void com.index.GeneralIndex.addproducttocartandcheckout(), org.testng.TestRunner@215be6bb)</span>
-                <span class="method-start">17 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setUp(public void com.index.GeneralIndex.addproducttocartandcheckout(), org.testng.TestRunner@4ffacb72)</span>
+                <span class="method-start">16 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">addproducttocartandcheckout</span>
-                <span class="method-start">87853 ms</span>
+                <span class="method-start">44588 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=addproducttocartandcheckout status=SUCCESS method=GeneralIndex.addproducttocartandc...)</span>
-                <span class="method-start">219337 ms</span>
+                <span class="method-name">tearDown([TestResult name=addproducttocartandcheckout status=SKIP method=GeneralIndex.addproducttocartandchec...)</span>
+                <span class="method-start">44589 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -283,6 +283,44 @@ public class GeneralVerification extends AbstractPage {
 	}
 	
 	
+	
+
+	@FindBy(xpath="//p[contains(text(),'Congratulations! Your order has been successfully placed.')]") private WebElement orderplacedsuccessfullyts;
+
+	public boolean orderplacedsuccessfully() {
+		// TODO Auto-generated method stub
+		
+		Common.pause(8);
+		
+		String str = orderplacedsuccessfullyts.getText();
+		
+		System.out.println(str);
+		
+		if(str.equals("Congratulations! Your order has been successfully placed. Order details.")){
+			
+			WebElement orderdetailsbutton = driver.findElement(By.xpath("//div/a[contains(text(),'Order details')]"));
+			orderdetailsbutton.click();
+			
+			Common.pause(10);
+			
+			WebElement productnameinbill = driver.findElement(By.xpath("//td/a[contains(text(),'Black Dobby')]"));
+			
+			if(generalIndexpage.productname.equals(productnameinbill.getText())){
+				
+				Common.log("--> Product name verify with the bill <--");
+				return true;
+			}
+			
+			else{
+			   Common.log("--> Product name is not verify with the bill <--");
+			   return false;
+			}
+		}
+		else
+		return false;
+	}
+	
+	
 
 	
 		

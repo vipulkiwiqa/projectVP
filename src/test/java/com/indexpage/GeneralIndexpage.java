@@ -2,6 +2,7 @@ package com.indexpage;
 import java.util.List;
 import java.util.Set;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -23,6 +24,7 @@ public class GeneralIndexpage extends AbstractPage {
 	
 	String root=null;
 	
+	public static String productname= null;
 	//profile picture path
 	
 	
@@ -143,7 +145,28 @@ public class GeneralIndexpage extends AbstractPage {
 	
 	@FindBy(xpath="//input[@name='user_data[b_lastname]']")private WebElement lastname_ts;
 	
-	@FindBy(xpath="//input[@name='user_data[email]']")private WebElement emailaddress_ts;
+	@FindBy(xpath="//div//div[3]//input[@name='user_data[email]']")private WebElement emailaddress_ts;
+	
+	@FindBy(xpath="//input[@name='user_data[b_phone]']")private WebElement phonenumber_ts;
+	
+	@FindBy(xpath="//input[@name='user_data[b_address]']")private WebElement address_ts;
+	
+	@FindBy(xpath="//input[@name='user_data[b_city]']")private WebElement city_ts;
+	
+	@FindBy(xpath="//select[@name='user_data[b_country]']")private WebElement country_ts;
+	
+	@FindBy(xpath="//input[@name='user_data[b_state]']")private WebElement state_ts;
+	
+	@FindBy(xpath="//input[@name='user_data[b_zipcode]']")private WebElement postalcodets;
+	
+	@FindBy(xpath="//input[@id='sw_sa_suffix_yes']")private WebElement billingandshippingsameclickts;
+	
+	@FindBy(xpath="//button[contains(text(),'Continue')]")private WebElement clickoncontinuebuttonts;
+	
+	@FindBy(xpath="//strong[contains(text(),'Cash On Delivery')]/..//input")private WebElement cashondeliveryts;
+	
+	@FindBy(xpath="//button[contains(text(),'Submit my order')]")private WebElement submitmyorderbuttonts;
+	
 	
 	
 	
@@ -972,6 +995,8 @@ public GeneralVerification clickonproduct() {
 	Common.pause(8);
 	
 	if(product.isDisplayed()){
+		
+		productname = product.getText();
 		product.click();
 		Common.log("--> Click on the product <--");
 	}
@@ -1158,15 +1183,30 @@ public GeneralVerification enterLastnamets() {
 
 public GeneralVerification enteremailaddressts() {
 	// TODO Auto-generated method stub
-	Common.pause(6);
-
+	Common.pause(4);
+	
 	if(emailaddress_ts.isDisplayed()){
 		emailaddress_ts.sendKeys(TestData.ts_emailaddress());
-		Common.log("--> Enter Email Address : " + TestData.ts_emailaddress()+" <--");
+		Common.log("--> Enter Email Address :" +TestData.ts_emailaddress() + " <--");
 	}
 	else
-		Common.log("--> Email Address is not Entered <--");
+		Common.log("--> Email Address is not entered <--");
+	return new GeneralVerification(driver);
+}
+
+
+
+
+public GeneralVerification enterphonenumberts() {
+	// TODO Auto-generated method stub
+	Common.pause(3);
 	
+	if(phonenumber_ts.isDisplayed()){
+		phonenumber_ts.sendKeys(TestData.ts_phone());
+		Common.log("--> Enter Phone Number :"+TestData.ts_phone()+" <---");
+	}
+	else
+		Common.log("--> Phone Number is not entered <---");
 	
 	return new GeneralVerification(driver);
 }
@@ -1174,8 +1214,174 @@ public GeneralVerification enteremailaddressts() {
 
 
 
+public GeneralVerification enteraddressts() {
+	// TODO Auto-generated method stub
+	Common.pause(3);
+	
+	if(address_ts.isDisplayed()){
+		address_ts.sendKeys(TestData.ts_address());
+		Common.log("--> Enter Address :"+TestData.ts_address()+" <---");
+	}
+	else
+		Common.log("--> Address is not entered <---");
+	
+	
+	
+	return new GeneralVerification(driver);
+}
+
+
+public GeneralVerification entercityts() {
+	// TODO Auto-generated method stub
+	Common.pause(3);
+	
+	if(city_ts.isDisplayed()){
+		city_ts.sendKeys(TestData.ts_city());
+		Common.log("--> Enter City :"+TestData.ts_city()+" <---");
+	}
+	else
+		Common.log("--> City is not entered <---");
+	
+	
+	
+	return new GeneralVerification(driver);
+}
+
+
+
+public GeneralVerification entercountryts() {
+	// TODO Auto-generated method stub
+	Common.pause(3);
+	
+	if(country_ts.isDisplayed()){
+		
+		Select country = new Select(country_ts);
+		
+		country.selectByVisibleText(TestData.ts_country());
+		//country_ts.sendKeys(TestData.ts_city());
+		Common.log("--> Select Country :"+TestData.ts_country()+" <---");
+	}
+	else
+		Common.log("--> Country is not Selected <---");
+		
+	return new GeneralVerification(driver);
+}
+
+public GeneralVerification enterstatets() {
+	// TODO Auto-generated method stub
+	Common.pause(3);
+	
+	if(state_ts.isDisplayed()){
+		state_ts.sendKeys(TestData.ts_state());
+		Common.log("--> Enter State :"+TestData.ts_state()+" <---");
+	}
+	else
+		Common.log("--> State is not Entered <---");
+		
+	return new GeneralVerification(driver);
+}
+
+public GeneralVerification enterpostalcodets() {
+	// TODO Auto-generated method stub
+	Common.pause(3);
+	
+	if(postalcodets.isDisplayed()){
+		postalcodets.sendKeys(TestData.ts_postalcode());
+		Common.log("--> Enter Postal Code :"+TestData.ts_postalcode()+" <---");
+	}
+	else
+		Common.log("--> Postal Code is not entered <---");
+		
+	return new GeneralVerification(driver);
+}
+
+ public GeneralVerification billingandshippingsameclickts() {
+	// TODO Auto-generated method stub
+	Common.pause(3);
+	
+	if(billingandshippingsameclickts.isDisplayed()){
+		billingandshippingsameclickts.click();
+		Common.log("--> Shipping address is same as billing address <---");
+	}
+	else
+		Common.log("--> Shipping address is NOT same as billing address <---");
+		
+	return new GeneralVerification(driver);
+}
+
+ public GeneralVerification clickoncontinuebuttonts() {
+	// TODO Auto-generated method stub
+	Common.pause(7);
+	
+	if(clickoncontinuebuttonts.isDisplayed()){
+		
+		clickoncontinuebuttonts.click();
+		Common.log("--> Click on Continue Button <---");
+	}
+	else
+		Common.log("--> Didn't Click on continue button <---");
+		
+	return new GeneralVerification(driver);
+}
+
+ public GeneralVerification clickoncashondeliveryts() {
+		// TODO Auto-generated method stub
+		Common.pause(3);
+		
+		if(cashondeliveryts.isDisplayed()){
+			
+			cashondeliveryts.click();
+			Common.log("--> Click on Cash On Delivery Option <---");
+		}
+		else
+			Common.log("--> Didn't Click on Cash On Delivery Option <---");
+			
+		return new GeneralVerification(driver);
+	}
+ 
+ 
+ public GeneralVerification clicksubmitmyorderbuttonts() {
+		// TODO Auto-generated method stub
+		Common.pause(3);
+		
+		if(submitmyorderbuttonts.isDisplayed()){
+			
+			submitmyorderbuttonts.click();
+			Common.log("--> Click on Submit My Order button <---");
+		}
+		else
+			Common.log("--> Didn't Click on Submit My Order button <---");
+			
+		return new GeneralVerification(driver);
+	}
+
+
+
+
+public GeneralVerification clickoncontinuebuttonshippingoptionsts() {
+	// TODO Auto-generated method stub
+	
+	WebElement move = driver.findElement(By.xpath("//a[contains(text(),'Billing and Shipping Address')]"));
+	 
+	Actions act = new Actions(driver);
+	
+	act.moveToElement(move).build().perform();
+	
+    if(clickoncontinuebuttonts.isDisplayed()){
+		
+		clickoncontinuebuttonts.click();
+		Common.log("--> Click on Continue Button <---");
+	}
+	else
+		Common.log("--> Didn't Click on continue button <---");
+		
+	
+	return new GeneralVerification(driver);
+}
+ 
 
 
 }
+
 
 

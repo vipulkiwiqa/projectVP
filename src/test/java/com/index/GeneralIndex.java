@@ -722,6 +722,70 @@ public class GeneralIndex extends SeleniumInit {
              Common.logstep("Step "+ (step++) +". Enter Email Address");
 			 
 			 generalVerification = generalIndexpage.enteremailaddressts();
+			 
+             Common.logstep("Step "+ (step++) +". Enter Phone Number");
+			 
+			 generalVerification = generalIndexpage.enterphonenumberts();
+			 
+             Common.logstep("Step "+ (step++) +". Enter Address");
+			 
+			 generalVerification = generalIndexpage.enteraddressts();
+			 
+             Common.logstep("Step "+ (step++) +". Enter City");
+			 
+			 generalVerification = generalIndexpage.entercityts();
+			 
+             Common.logstep("Step "+ (step++) +". Select the Country");
+			 
+			 generalVerification = generalIndexpage.entercountryts();
+
+			 Common.logstep("Step "+ (step++) +". Enter State");
+			 
+			 generalVerification = generalIndexpage.enterstatets();
+			 
+             Common.logstep("Step "+ (step++) +". Enter Postal Code");
+			 
+			 generalVerification = generalIndexpage.enterpostalcodets();
+
+			 Common.logstep("Step "+ (step++) +". Shipping Address is same as Billing Address");
+			 
+			 generalVerification = generalIndexpage.billingandshippingsameclickts();
+ 
+			 Common.logstep("Step "+ (step++) +". Click on continue Button");
+			 
+			 generalVerification = generalIndexpage.clickoncontinuebuttonts();
+			 
+             Common.logstep("Step "+ (step++) +". Click on continue Button of Shipping Options");
+			 
+			 generalVerification = generalIndexpage.clickoncontinuebuttonshippingoptionsts();
+			 
+             Common.logstep("Step "+ (step++) +". Click on Cash On Delivery Options");
+			 
+			 generalVerification = generalIndexpage.clickoncashondeliveryts();
+
+			 Common.logstep("Step "+ (step++) +". Click on Submit My Order Button");
+			 
+			 generalVerification = generalIndexpage.clicksubmitmyorderbuttonts();
+			 
+			 
+					
+				if(generalVerification.orderplacedsuccessfully()){
+					   Common.logstep("Order placed successfully");
+					   Common.logStatus("Pass");
+					   Assert.assertTrue(true);
+				}
+				else{
+					   Common.logstep("Order is NOT placed successfully");
+					   Common.logStatus("Fail");
+					   Assert.assertTrue(false);
+					
+				}
+				
+			 
+			 
+			 
+		
+		
 		
 		
 		
