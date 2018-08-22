@@ -1127,8 +1127,8 @@ public GeneralVerification enterfirstnamets() {
 	Common.pause(4);
 
 	if(firstname_ts.isDisplayed()){
-		firstname_ts.sendKeys("xzyabc");
-		Common.log("--> Enter Name : " + firstname_ts.getText()+" <--");
+		firstname_ts.sendKeys(TestData.ts_firstname());
+		Common.log("--> Enter First Name : " + TestData.ts_firstname()+" <--");
 	}
 	else
 		Common.log("--> First Name is not Entered <--");
@@ -1144,11 +1144,11 @@ public GeneralVerification enterLastnamets() {
 	Common.pause(3);
 	
 	if(lastname_ts.isDisplayed()){
-		lastname_ts.sendKeys("pqr");
-		Common.log("--> Enter Name : " + lastname_ts.getText()+" <--");
+		lastname_ts.sendKeys(TestData.ts_lastname());
+		Common.log("--> Enter Last Name : " + TestData.ts_lastname()+" <--");
 	}
 	else
-		Common.log("--> First Name is not Entered <--");
+		Common.log("--> Last Name is not Entered <--");
 	
 	return new GeneralVerification(driver);
 }
@@ -1158,14 +1158,14 @@ public GeneralVerification enterLastnamets() {
 
 public GeneralVerification enteremailaddressts() {
 	// TODO Auto-generated method stub
-	Common.pause(4);
+	Common.pause(6);
 
 	if(emailaddress_ts.isDisplayed()){
-		emailaddress_ts.sendKeys("pqr@gmail.com");
-		Common.log("--> Enter Name : " + emailaddress_ts.getText()+" <--");
+		emailaddress_ts.sendKeys(TestData.ts_emailaddress());
+		Common.log("--> Enter Email Address : " + TestData.ts_emailaddress()+" <--");
 	}
 	else
-		Common.log("--> First Name is not Entered <--");
+		Common.log("--> Email Address is not Entered <--");
 	
 	
 	return new GeneralVerification(driver);

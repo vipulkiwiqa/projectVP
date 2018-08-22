@@ -89,32 +89,38 @@
       <![CDATA[<br><strong>Step 14. Enter First Name</strong></br>]]>
     </line>
     <line>
-      <![CDATA[</br>--> Enter Name :  <--]]>
+      <![CDATA[</br>--> Enter First Name : xzyabc <--]]>
     </line>
     <line>
       <![CDATA[<br><strong>Step 15. Enter Last Name</strong></br>]]>
     </line>
     <line>
-      <![CDATA[</br>--> Enter Name :  <--]]>
+      <![CDATA[</br>--> Enter Last Name : pqr <--]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong>Step 16. Enter Email Address</strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>--> Email Address is not Entered <--]]>
     </line>
   </reporter-output>
-  <suite name="Demo Frame Work- Test Suite 1" duration-ms="235725" started-at="2018-08-22T05:02:48Z" finished-at="2018-08-22T05:06:43Z">
+  <suite name="Demo Frame Work- Test Suite 1" duration-ms="232200" started-at="2018-08-22T05:27:02Z" finished-at="2018-08-22T05:30:54Z">
     <groups>
     </groups>
-    <test name="Test Script :: 01" duration-ms="235725" started-at="2018-08-22T05:02:48Z" finished-at="2018-08-22T05:06:43Z">
+    <test name="Test Script :: 01" duration-ms="232200" started-at="2018-08-22T05:27:02Z" finished-at="2018-08-22T05:30:54Z">
       <class name="com.index.GeneralIndex">
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.index.GeneralIndex@737996a0]" name="fetchSuiteConfiguration" is-config="true" duration-ms="9" started-at="2018-08-22T10:32:48Z" finished-at="2018-08-22T10:32:48Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.index.GeneralIndex@737996a0]" name="fetchSuiteConfiguration" is-config="true" duration-ms="10" started-at="2018-08-22T10:57:02Z" finished-at="2018-08-22T10:57:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4439f31e]]>
+                <![CDATA[org.testng.TestRunner@215be6bb]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.GeneralIndex@737996a0]" name="setUp" is-config="true" duration-ms="87094" started-at="2018-08-22T10:32:48Z" finished-at="2018-08-22T10:34:15Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.GeneralIndex@737996a0]" name="setUp" is-config="true" duration-ms="87836" started-at="2018-08-22T10:57:02Z" finished-at="2018-08-22T10:58:30Z">
           <params>
             <param index="0">
               <value>
@@ -123,14 +129,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@4439f31e]]>
+                <![CDATA[org.testng.TestRunner@215be6bb]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="addproducttocartandcheckout()[pri:0, instance:com.index.GeneralIndex@737996a0]" name="addproducttocartandcheckout" duration-ms="135761" started-at="2018-08-22T10:34:15Z" finished-at="2018-08-22T10:36:31Z">
+        <test-method status="PASS" signature="addproducttocartandcheckout()[pri:0, instance:com.index.GeneralIndex@737996a0]" name="addproducttocartandcheckout" duration-ms="131483" started-at="2018-08-22T10:58:30Z" finished-at="2018-08-22T11:00:41Z">
           <reporter-output>
             <line>
               <![CDATA[<strong> <h3 style="color:DarkViolet"> To verify that user is able to add the product into the cart and do checkout with all valid fields </h3> </strong>]]>
@@ -220,17 +226,23 @@
               <![CDATA[<br><strong>Step 14. Enter First Name</strong></br>]]>
             </line>
             <line>
-              <![CDATA[</br>--> Enter Name :  <--]]>
+              <![CDATA[</br>--> Enter First Name : xzyabc <--]]>
             </line>
             <line>
               <![CDATA[<br><strong>Step 15. Enter Last Name</strong></br>]]>
             </line>
             <line>
-              <![CDATA[</br>--> Enter Name :  <--]]>
+              <![CDATA[</br>--> Enter Last Name : pqr <--]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong>Step 16. Enter Email Address</strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>--> Email Address is not Entered <--]]>
             </line>
           </reporter-output>
         </test-method> <!-- addproducttocartandcheckout -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.GeneralIndex@737996a0]" name="tearDown" is-config="true" duration-ms="12853" started-at="2018-08-22T10:36:31Z" finished-at="2018-08-22T10:36:43Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.GeneralIndex@737996a0]" name="tearDown" is-config="true" duration-ms="12861" started-at="2018-08-22T11:00:41Z" finished-at="2018-08-22T11:00:54Z">
           <params>
             <param index="0">
               <value>

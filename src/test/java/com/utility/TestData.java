@@ -191,4 +191,24 @@ public class TestData {
 		  getExcelSheet(0).getRow(7).getCell(5).setCellType(Cell.CELL_TYPE_STRING);
 		  return getExcelSheet(0).getRow(7).getCell(5).getStringCellValue();
 		}
+	
+	//Threads and Shirts
+	public static String ts_firstname() {
+
+		  System.out.println("Call getURL.......");
+		  return getExcelSheet(1).getRow(0).getCell(1).getStringCellValue();
+		}
+	
+	public static String ts_lastname() {
+
+		  System.out.println("Call getURL.......");
+		  return getExcelSheet(1).getRow(1).getCell(1).getStringCellValue();
+		}
+	
+	public static String ts_emailaddress() {
+
+		  System.out.println("Call getURL.......");
+		  return getExcelSheet(1).getRow(2).getCell(1).getStringCellValue();
+		}
+	
 }
